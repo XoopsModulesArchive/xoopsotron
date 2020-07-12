@@ -1,0 +1,75 @@
+
+<{$script}>
+
+<div class="item" align="center">
+<{if $banner}><div align="center"><{$banner}><p /></div><{/if}>
+<div class="itemHead"><{$title}></div>
+<div class="itemBody">
+<div class="itemText"><{$text}><p />
+<div align="center">
+<form name=forme action="" method=post>
+<textarea name=texte rows=<{$text_box_h}> wrap=VIRTUAL cols=<{$text_box_w}>><{$text_box}></textarea>
+<p />
+<input onclick=hasard() type=button value="<{$text_submit}>">
+<p />
+</div>
+<{if $display}><div align="center"><hr /><{else}><div style="display: none;"><{/if}>
+<{if $xoopsotron_01}><h3><{$title01}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC1 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_01}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+<{if $xoopsotron_02}><h3><{$title02}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC2 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_02}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+
+<{if $xoopsotron_03}><h3><{$title03}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC3 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_03}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+
+<{if $xoopsotron_04}><h3><{$title04}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC4 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_04}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+
+<{if $xoopsotron_05}><h3><{$title05}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC5 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_05}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+
+<{if $xoopsotron_06}><h3><{$title06}></h3>
+	<select onchange=Xoopsotron() size=10 name=JC6 type="radio">
+		<{foreach item=xoopsotron from=$xoopsotron_06}>
+			<option selected value="<{$xoopsotron.item}>"><{$xoopsotron.item_short}></option>
+		<{/foreach}>
+	</select><p />
+<{/if}>
+
+</form>
+</div>
+</div>
+</div>
+
+<{if $admin}>
+	<div class="itemFoot"><{$admin}></div>
+<{/if}>
+</div>
+
+
+<div style="display: none;">myReferer is developed by The WolFactory (http://www.wolfpackclan.com/wolfactory), a Xoops division of the Wolf Pack Clan (http://www.wolfpackclan.com)</div>

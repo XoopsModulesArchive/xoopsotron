@@ -1,0 +1,29 @@
+<form action="" method=post>
+<div align="left">
+<{if $block.disp_cat}>
+	<table><tr><td>
+		<input type="radio" name="cat" value="1">&nbsp;<{$block.part01}></input><br />
+		<input type="radio" name="cat" value="2">&nbsp;<{$block.part02}></input><br />
+		<input type="radio" name="cat" value="3">&nbsp;<{$block.part03}></input><br />
+	</td><td>
+		<input type="radio" name="cat" value="4">&nbsp;<{$block.part04}></input><br />
+		<input type="radio" name="cat" value="5">&nbsp;<{$block.part05}></input><br />
+		<input type="radio" name="cat" value="6">&nbsp;<{$block.part06}></input><br />
+	</td></tr>
+	</table>
+<{else}>
+	<input type="hidden" name="cat" value="1" selected></input>
+<{/if}>
+</div>
+
+<div align="center">
+<textarea name="item" rows="5" cols="16"></textarea>
+<p /><input type="submit" name="" value="<{$block.submit}>">
+</div>
+</form>
+
+<{if $xoops_isadmin AND $block.count}>
+	<hr />
+	<a href="<{$xoops_url}>/modules/xoopsotron/admin/index.php"><{$block.waiting}></a>
+	<{$block.count}>
+<{/if}>
